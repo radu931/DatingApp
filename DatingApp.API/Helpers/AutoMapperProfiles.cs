@@ -9,7 +9,7 @@ namespace DatingApp.API.Helpers
     {
         public AutoMapperProfiles() 
         {
-            AllowNullDestinationValues = true;
+              var mapper = new MapperConfiguration(config => { config.ValidateInlineMaps = false; }).CreateMapper();
 
             CreateMap<User,UserForDetailedDto>()
                 .ForMember(dest=>dest.PhotoUrl, opt => { 
