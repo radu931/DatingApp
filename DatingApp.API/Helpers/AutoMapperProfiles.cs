@@ -9,6 +9,8 @@ namespace DatingApp.API.Helpers
     {
         public AutoMapperProfiles() 
         {
+            AllowNullDestinationValues = true;
+
             CreateMap<User,UserForDetailedDto>()
                 .ForMember(dest=>dest.PhotoUrl, opt => { 
                     opt.MapFrom(src =>src.Photos.FirstOrDefault(p =>p.IsMain).Url);
