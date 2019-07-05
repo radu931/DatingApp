@@ -13,5 +13,6 @@ namespace DatingApp.API.Data
         Task<IEnumerable<User>> GetUsersAsync();
         Task<User> GetUser(int id);
         Task<Photo> GetPhoto(int id);
+        Task<Photo> GetMainPhotoForUser(int userId);
     }
 }
