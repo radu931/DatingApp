@@ -9,7 +9,7 @@ namespace DatingApp.API.Helpers
 {
     public class PagedList<T> : List<T>
     {       
-        public int CurentPage { get; set; }
+        public int CurrentPage { get; set; }
         public int TotalPages { get; set; }
         public int PageSize { get; set; }
         public int TotalCount { get; set; }
@@ -18,7 +18,7 @@ namespace DatingApp.API.Helpers
         {
            TotalCount = count;
            PageSize = pageSize;
-           CurentPage = pageNumber;
+           CurrentPage = pageNumber;
            TotalPages = (int) Math.Ceiling(count/(double)pageSize);
            this.AddRange(items);
         }
