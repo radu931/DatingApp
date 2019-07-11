@@ -63,7 +63,7 @@ export class PhotoEditorComponent implements OnInit {
         }
       }
     };
-  }
+  } 
 
   setMainPhoto(photo: Photo) {
     this.userService.setMainPhoto(this.authService.decodedToken.nameid, photo.id).subscribe(() => {
@@ -73,7 +73,6 @@ export class PhotoEditorComponent implements OnInit {
       this.authService.changeMamberPhoto(photo.url);
       this.authService.currentUser.photoUrl = photo.url;
       localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
-    // tslint:disable-next-line:no-shadowed-variable
     }, error => {
       this.alertify.error(error);
     });
