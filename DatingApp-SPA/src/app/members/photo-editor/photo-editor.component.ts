@@ -4,9 +4,8 @@ import { FileUploader } from 'ng2-file-upload';
 import { environment } from 'src/environments/environment';
 import { AuthService } from 'src/app/_services/auth.service';
 import { UserService } from 'src/app/_services/user.service';
-import { error } from '@angular/compiler/src/util';
 import { AlertifyService } from 'src/app/_services/alertify.service';
-import { emit } from 'cluster';
+
 
 @Component({
   selector: 'app-photo-editor',
